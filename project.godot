@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="split"
-run/main_scene="uid://caav3s5ge4dqt"
+run/main_scene="uid://6r1mwttilbe"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://Game Stuff/Assets/icon.svg"
 
