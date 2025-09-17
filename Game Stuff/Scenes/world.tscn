@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://caav3s5ge4dqt"]
+[gd_scene load_steps=5 format=3 uid="uid://caav3s5ge4dqt"]
+
+[ext_resource type="Script" uid="uid://bp5borycvjidl" path="res://Game Stuff/Code/world.gd" id="1_a1w2j"]
+[ext_resource type="Script" uid="uid://rtebjw72mtw1" path="res://Game Stuff/Code/splitter.gd" id="1_wajsh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yu5j2"]
 size = Vector2(559, 94)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_yu5j2"]
+radius = 1.0
+
 [node name="World" type="Node2D"]
+script = ExtResource("1_a1w2j")
 
 [node name="block" type="CharacterBody2D" parent="."]
 
@@ -11,3 +18,10 @@ size = Vector2(559, 94)
 shape = SubResource("RectangleShape2D_yu5j2")
 
 [node name="Camera2D" type="Camera2D" parent="block"]
+
+[node name="splitter" type="Area2D" parent="."]
+script = ExtResource("1_wajsh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="splitter"]
+shape = SubResource("CircleShape2D_yu5j2")
+debug_color = Color(0.902369, 0.000152478, 0.756521, 0.42)
